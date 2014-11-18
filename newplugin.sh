@@ -1,7 +1,10 @@
 #!/bin/bash
-read -p "Name the new plugin" pluginname
-newplugin=./plugins/$pluginname
-cd *wiki
-mkdir $newplugin
-sed s/sample-plugin/$pluginname/ ./plugins/sample-plugin/plugin.info > $newplugin/plugin.info
-sed s/sample-plugin/$pluginname/ ./plugins/sample-plugin/readme.tid > $newplugin/readme.tid
+read -p "Name the new plugin: " pluginname
+pluginwiki=${pluginname}wiki
+pluginfolder=$pluginwiki/plugins/$pluginname
+cp -r *wiki $pluginwiki
+mkdir -p $pluginfolder
+for f in $(ls $pluginfolder/../sample-plugin)
+do
+    sed s/sample-plugin/$pluginname/ $pluginfolder/../sample-plugin/$f > $pluginfolder/$f
+done
