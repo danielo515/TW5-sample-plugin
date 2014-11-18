@@ -7,13 +7,7 @@
 	],
 	"themes": [
 		"tiddlywiki/vanilla",
-		"tiddlywiki/snowwhite",
-		"tiddlywiki/nighttime",
-		"tiddlywiki/starlight",
-		"tiddlywiki/seamless",
-		"tiddlywiki/stickytitles",
-		"tiddlywiki/centralised",
-		"tiddlywiki/readonly"
+		"tiddlywiki/snowwhite"
 	],
 	"languages": [
 		"en-US"
